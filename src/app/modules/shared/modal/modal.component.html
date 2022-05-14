@@ -1,0 +1,7 @@
+<div class="modalOuter" (click)="emitClose()">
+  <div class="modalInner" (click)="$event.stopPropagation()">
+    <h2 *ngIf="room != null">{{title + room.id}}</h2>
+    <input *ngIf="withInputField"/>
+    <button (click)="emitButtonClicked()">{{buttonName}}</button>
+  </div>
+</div>

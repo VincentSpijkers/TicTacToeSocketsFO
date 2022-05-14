@@ -1,0 +1,6 @@
+@import "src/styles.scss";
+
+.lobbyContainer {
+  @include flex-center-center-row;
+  min-height: 95vh
+}

@@ -1,0 +1,23 @@
+<app-modal *ngIf="isModalActive"
+           [room]="room"
+           (onButtonFired)="startGame()"
+           [title]="'Your room code is:'"
+           (onCloseFired)="isModalActive = false"
+           [buttonName]="'Start Game'">
+</app-modal>
+
+<!--<app-modal *ngIf="isModalActive"-->
+<!--           [room]="room"-->
+<!--           (onButtonFired)="startGame()"-->
+<!--           (onCloseFired)="isModalActive = false"-->
+<!--           [title]="'Enter room code:'"-->
+<!--           [buttonName]="'Join Game'">-->
+<!--</app-modal>-->
+
+
+<div class="lobbyContainer">
+  <div class="lobbyContainer-buttons">
+    <button (click)="createLobby()">Create Room</button>
+    <button>Join Room</button>
+  </div>
+</div>

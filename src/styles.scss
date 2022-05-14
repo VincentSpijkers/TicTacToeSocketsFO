@@ -1,1 +1,109 @@
 /* You can add global styles to this file, and also import other style files */
+$base-color: #23272a;
+
+$task-background-color: #2c2f33;
+
+$category-item-hover: #2c2f33;
+
+$text-color-base: #475665;
+
+$add-task-color: #5865f2;
+
+$off-white: #dedede;
+
+@mixin flex-center-center-column {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+@mixin flex-center-start-column {
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  flex-direction: column;
+}
+
+@mixin flex-start-center-column {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  flex-direction: column;
+}
+
+@mixin flex-center-center-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+
+@mixin flex-center-start-row {
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  flex-direction: row;
+}
+
+@mixin flex-start-center-row {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  flex-direction: row;
+}
+
+@mixin flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+@mixin flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+p {
+  font-size: 16px;
+  color: $text-color-base;
+}
+
+h1 {
+  font-size: 1.8rem;
+  color: $text-color-base;
+}
+
+h2 {
+  font-size: 1.6rem;
+  color: $text-color-base;
+}
+
+h3 {
+  font-size: 1.4rem;
+  color: $text-color-base;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  font-family: 'Open Sans', sans-serif;
+}
+
+button {
+  background-color: #008CBA;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 2rem;
+  cursor: pointer;
+  min-width: 10rem;
+  user-select: none;
+}
+
+button:hover{
+  background-color: #0c5b78;
+}
