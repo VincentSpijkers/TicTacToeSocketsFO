@@ -1,2 +1,18 @@
-<p>Room: {{roomId}}</p>
-<p>game-board works!</p>
+<div class="gameboardContainer">
+
+  <div *ngIf="tooManyPlayerException; else readyToPlay" class="gameboardContainer-exception">
+    <h2>This room allready has 2 players, please join another room</h2>
+    <button (click)="navigateToLobby()">Return to lobby</button>
+  </div>
+
+  <ng-template #readyToPlay>
+    <h2>Your room number is: {{roomId}}</h2>
+    <h3>You are player: {{player != null && player.type}}</h3>
+    <div class="row" *ngFor="let row of ticTacToeGrid; let x = index;">
+      <div class="column" *ngFor="let tile of row; let y = index" (click)="placeAMove(x, y)">
+        {{tile}}
+      </div>
+    </div>
+  </ng-template>
+
+</div>

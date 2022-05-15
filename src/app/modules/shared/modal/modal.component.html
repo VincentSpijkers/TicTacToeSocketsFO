@@ -1,7 +1,14 @@
 <div class="modalOuter" (click)="emitClose()">
   <div class="modalInner" (click)="$event.stopPropagation()">
-    <h2 *ngIf="room != null">{{title + room.id}}</h2>
-    <input *ngIf="withInputField"/>
-    <button (click)="emitButtonClicked()">{{buttonName}}</button>
+    <h2>{{title}}</h2>
+    <form [formGroup]="form">
+
+      <input matInput type="number" name="roomIdField" min="0"
+             placeholder="Room number" formControlName="roomIdField">
+
+      <button [disabled]="!form.valid" (click)="emitButtonClicked()">
+        {{buttonName}}
+      </button>
+    </form>
   </div>
 </div>

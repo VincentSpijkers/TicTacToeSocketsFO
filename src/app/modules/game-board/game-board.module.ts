@@ -9,7 +9,7 @@ import { GameBoardComponent } from './game-board/game-board.component';
     GameBoardComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
   ]
 })
 export class GameBoardModule { }

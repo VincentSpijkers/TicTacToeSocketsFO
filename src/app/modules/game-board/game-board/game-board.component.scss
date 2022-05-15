@@ -1,0 +1,29 @@
+@import "src/styles";
+
+.gameboardContainer {
+  @include flex-center-center-column;
+
+  .gameboardContainer-exception {
+    @include flex-center-center-column;
+    height: 100vh;
+  }
+
+  .row{
+    display: flex;
+    flex-direction: row;
+  }
+
+  .column{
+    min-height: 10rem;
+    min-width: 10rem;
+    border: 1px solid $blue-base-color;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+  }
+
+  .column:hover{
+    background-color: #a6d1de;
+  }
+}

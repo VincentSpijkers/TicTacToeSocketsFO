@@ -1,4 +1,4 @@
-/* You can add global styles to this file, and also import other style files */
+
 $base-color: #23272a;
 
 $task-background-color: #2c2f33;
@@ -10,6 +10,8 @@ $text-color-base: #475665;
 $add-task-color: #5865f2;
 
 $off-white: #dedede;
+
+$blue-base-color: #0c5b78;
 
 @mixin flex-center-center-column {
   display: flex;
@@ -106,4 +108,25 @@ button {
 
 button:hover{
   background-color: #0c5b78;
+}
+
+button:disabled{
+  background: #dddddd;
+}
+
+form {
+  @include flex-center-center-column
+}
+
+input[type=number] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }

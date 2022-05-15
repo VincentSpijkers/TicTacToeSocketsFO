@@ -1,23 +1,16 @@
-<app-modal *ngIf="isModalActive"
+<app-modal *ngIf="isJoinRoomModalActive"
+           (onButtonFired)="joinGame($event)"
+           (onCloseFired)="isJoinRoomModalActive = false"
            [room]="room"
-           (onButtonFired)="startGame()"
-           [title]="'Your room code is:'"
-           (onCloseFired)="isModalActive = false"
-           [buttonName]="'Start Game'">
+           [title]="'Enter room code:'"
+           [buttonName]="'Join Game'">
 </app-modal>
-
-<!--<app-modal *ngIf="isModalActive"-->
-<!--           [room]="room"-->
-<!--           (onButtonFired)="startGame()"-->
-<!--           (onCloseFired)="isModalActive = false"-->
-<!--           [title]="'Enter room code:'"-->
-<!--           [buttonName]="'Join Game'">-->
-<!--</app-modal>-->
 
 
 <div class="lobbyContainer">
+  <h1>Create or join a room of tictactoe!</h1>
   <div class="lobbyContainer-buttons">
     <button (click)="createLobby()">Create Room</button>
-    <button>Join Room</button>
+    <button (click)="joinLobby()">Join Room</button>
   </div>
 </div>

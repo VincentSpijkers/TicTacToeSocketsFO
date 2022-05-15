@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ModalComponent } from './modal/modal.component';
+import {ReactiveFormsModule} from "@angular/forms";
 
 
 
@@ -12,7 +13,8 @@ import { ModalComponent } from './modal/modal.component';
         ModalComponent
     ],
     imports: [
-        CommonModule
+        CommonModule,
+        ReactiveFormsModule,
     ]
 })
 export class SharedModule { }
